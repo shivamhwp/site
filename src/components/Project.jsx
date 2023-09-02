@@ -3,7 +3,7 @@ import React from "react";
 const Project = (props) => {
   return (
     <div className=" flex flex-col w-auto h-auto ">
-      <div className="text-gray-200 lg:pt-8 pt-6 font-semibold">
+      <div className="text-gray-200 lg:pt-8 pt-6 font-semibold hover:underline">
         <a href={props.link} target="_blank">
           {props.title}
         </a>

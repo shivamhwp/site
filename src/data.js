@@ -8,7 +8,7 @@ export const projects = [
   {
     id: 2,
     title: "Aria",
-    description: "chatbot based on gpt-3.5-turbo api by OpenAI.",
+    description: "chatbot based on gpt-3.5-turbo API by OpenAI.",
     link: "https://shivamhwp-aria.vercel.app",
   },
   {

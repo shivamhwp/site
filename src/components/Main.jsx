@@ -39,6 +39,16 @@ const Main = () => {
             am an independent developer who loves to build things. I like
             design, web-development and music.
           </div>
+          <div className="lg:pt-12 pt-8 w-full">
+            rn I am building an extension that vanishes your social media feed
+            at
+            <a
+              href="https://buildspace.so"
+              className="text-white hover:underline px-1"
+            >
+              buildspace.
+            </a>
+          </div>
 
           {/* projects */}
           <div className="pt-12 flex flex-col w-full ">
