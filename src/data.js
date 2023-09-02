@@ -11,4 +11,10 @@ export const projects = [
     description: "chatbot based on gpt-3.5-turbo api by OpenAI.",
     link: "https://shivamhwp-aria.vercel.app",
   },
+  {
+    id: 3,
+    title: "shivamsharma.net",
+    description: " personal website built with astro.",
+    link: "https://shivamsharma.net",
+  },
 ];
