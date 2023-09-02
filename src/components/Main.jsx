@@ -4,7 +4,7 @@ import { projects } from "../data";
 const Main = () => {
   return (
     <>
-      <div className="bg-black flex flex-col text-gray-300 lg:px-44 xl:px-80 md:px-12 px-8 w-screen h-screen pt-16">
+      <div className="bg-black flex flex-col text-gray-300 lg:px-44 xl:px-80 md:px-12 px-8 w-screen h-screen lg:pt-16 pt-6">
         {/* navbar : proile icons and name*/}
 
         <nav className="h-16 w-full text-gray-300 flex items-center justify-between">
@@ -35,8 +35,8 @@ const Main = () => {
         <div className="flex flex-col items-center justify-start h-full w-full text-xl ">
           {/* intro */}
           <div className="lg:pt-12 pt-8 ">
-            Hi there, I'm <span className="font-bold text-white">Shivam</span> I
-            am an independent developer who loves to build things. I like
+            Hi there, I'm <span className="font-bold text-white">Shivam.</span>{" "}
+            I am an independent developer who loves to build things. I like
             design, web-development and music.
           </div>
           <div className="lg:pt-12 pt-8 w-full">
@@ -69,7 +69,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <hr className="border-gray-400 pb-8" />
+        <hr className="border-gray-400 pb-8 pt-6" />
       </div>
     </>
   );
