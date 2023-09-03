@@ -54,7 +54,7 @@ const Main = () => {
           <div className="pt-12 flex flex-col w-full ">
             <div className="text-white font-bold text-2xl">Projects</div>
 
-            <div className="grid grid-rows-auto lg:grid-cols-3 md:grid-cols-2 grid-cols-1 pr-2 gap-2 pt-8">
+            <div className="grid grid-rows-auto lg:grid-cols-3 md:grid-cols-2 grid-cols-1 pr-2 gap-2 pt-6 pb-12 ">
               {projects.map((projects) => {
                 return (
                   <div key={projects?.id}>
