@@ -27,6 +27,9 @@ const Main = () => {
             <a href="https://x.com/shivamhwp" target="_blank">
               <img src="./x.svg" alt="x" className="h-6 w-6" />
             </a>
+            <a href="https://shivamr.hashnode.dev/" target="_blank">
+              <img src="./globe.svg" alt="x" className="h-6 w-6" />
+            </a>
           </div>
         </nav>
 
