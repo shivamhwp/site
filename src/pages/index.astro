@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Main from "../components/Main";
 ---
 
@@ -8,9 +9,10 @@ import Main from "../components/Main";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
     <title>shivam</title>
   </head>
-  <body class="bg-black">
+  <body class="bg-zinc-900 ">
     <Main client:load />
   </body>
 </html>
