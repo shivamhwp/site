@@ -41,12 +41,12 @@ const Main = () => {
             Hi there, I'm{" "}
             <span className="font-bold text-zinc-200">Shivam.</span> I am an
             independent developer who loves to build things. I like design,
-            web-development and minimalism.
+            web-dev and minimalism.
           </div>
 
           {/* projects */}
           <div className="pt-12 flex flex-col w-full ">
-            <div className="text-zinc-200 font-bold text-2xl">Projects</div>
+            <div className="text-zinc-200 font-bold text-2xl"> Projects</div>
 
             <div className="grid grid-rows-auto lg:grid-cols-3 md:grid-cols-2 grid-cols-1 pr-2 gap-2 pt-6 pb-12 ">
               {projects.map((projects) => {
@@ -56,6 +56,7 @@ const Main = () => {
                       title={projects?.title}
                       description={projects?.description}
                       link={projects?.link}
+                      github_link={projects?.github_link}
                     />
                   </div>
                 );
