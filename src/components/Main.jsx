@@ -4,7 +4,7 @@ import { projects } from "../data";
 const Main = () => {
   return (
     <>
-      <div className="bg-zinc-900 flex flex-col text-gray-300 lg:px-44 xl:px-96 md:px-12 px-8 w-screen h-screen lg:pt-16 pt-6">
+      <div className="bg-zinc-900 flex flex-col text-gray-400 lg:px-44 xl:px-96 md:px-12 px-8 w-screen h-screen lg:pt-16 pt-6">
         {/* navbar : proile icons and name*/}
 
         <nav className="h-16 w-full text-gray-300 flex items-center justify-between">
@@ -38,14 +38,15 @@ const Main = () => {
         <div className="flex flex-col items-center justify-start h-full w-full text-xl ">
           {/* intro */}
           <div className="lg:pt-12 pt-8 ">
-            Hi there, I'm <span className="font-bold text-white">Shivam.</span>{" "}
-            I am an independent developer who loves to build things. I like
-            design, web-development and minimalism.
+            Hi there, I'm{" "}
+            <span className="font-bold text-zinc-200">Shivam.</span> I am an
+            independent developer who loves to build things. I like design,
+            web-development and minimalism.
           </div>
 
           {/* projects */}
           <div className="pt-12 flex flex-col w-full ">
-            <div className="text-white font-bold text-2xl">Projects</div>
+            <div className="text-zinc-200 font-bold text-2xl">Projects</div>
 
             <div className="grid grid-rows-auto lg:grid-cols-3 md:grid-cols-2 grid-cols-1 pr-2 gap-2 pt-6 pb-12 ">
               {projects.map((projects) => {
@@ -62,7 +63,6 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <hr className="border-gray-400 pb-8 pt-6" />
       </div>
     </>
   );
