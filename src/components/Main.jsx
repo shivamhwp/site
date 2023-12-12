@@ -38,10 +38,7 @@ const Main = () => {
         <div className="flex flex-col items-center justify-start h-full w-full text-xl ">
           {/* intro */}
           <div className="lg:pt-12 pt-8 ">
-            Hi there, I'm{" "}
-            <span className="font-bold text-zinc-200">Shivam.</span> I am an
-            independent developer who loves to build things. I like design,
-            web-dev and minimalism.
+i code.
           </div>
 
           {/* projects */}
