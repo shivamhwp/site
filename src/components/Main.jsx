@@ -4,7 +4,7 @@ import { projects } from "../data";
 const Main = () => {
   return (
     <>
-      <div className="bg-zinc-900 flex flex-col text-gray-400 lg:px-44 xl:px-96 md:px-12 px-8 w-screen h-screen lg:pt-16 pt-6">
+      <div className="bg-zinc-950 flex flex-col text-gray-400 lg:px-44 xl:px-96 md:px-12 px-8 w-screen h-screen lg:pt-16 pt-6">
         {/* navbar : proile icons and name*/}
 
         <nav className="h-16 w-full text-gray-300 flex items-center justify-between">
