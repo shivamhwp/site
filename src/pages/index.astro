@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Main from "../components/Main";
+
 ---
 
 <html lang="en">
@@ -12,7 +13,9 @@ import Main from "../components/Main";
     <ViewTransitions />
     <title>shivam</title>
   </head>
-  <body class="bg-zinc-900 ">
+  <body class="bg-zinc-200">
+
     <Main client:load />
+
   </body>
 </html>

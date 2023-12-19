@@ -8,7 +8,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Krypt",
+    title: "krypt",
     description: "send crypto to anyone in the world with GIFs.",
     link: "https://kryptss.netlify.app",
     github_link: "https://github.com/shivamhwp/krypt",
