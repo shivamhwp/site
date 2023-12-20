@@ -9,9 +9,7 @@ const Main = () => {
       <div className="flex flex-col items-center justify-start h-full w-full text-xl ">
         {/* intro */}
         <div className="lg:pt-12 pt-16 ">
-          hi there, i am shivam a full-stack web-dev. i primarily work with
-          <a href="https://www.nextjs.org"> nextjs13 </a>, tailwind-css,
-          typescript, postgres, trpc, express etc.
+          hi there, i am shivam a full-stack web-dev.
         </div>
         {/* projects */}
 
