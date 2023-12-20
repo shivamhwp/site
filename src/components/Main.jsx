@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <div className="bg-zinc-200 flex flex-col text-zinc-900 lg:px-44 xl:px-96 md:px-12 px-8 w-screen h-screen lg:pt-16 pt-6">
       <Navbar />
-      <div className="flex flex-col items-center justify-start h-full w-full text-xl ">
+      <div className="flex flex-col items-start justify-start h-full w-full text-xl ">
         {/* intro */}
         <div className="lg:pt-12 pt-16 ">
           hi there, i am shivam a full-stack web-dev.
