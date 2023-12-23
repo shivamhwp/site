@@ -10,6 +10,9 @@ const Main = () => {
         {/* intro */}
         <div className="lg:pt-12 pt-16 ">
           hi there, i am shivam a full-stack web-dev.
+          <br /> rn i am working on colle club where only college students can
+          join and share their thoughts on different topics,courses they have
+          bought or colleges "anonymously".
         </div>
         {/* projects */}
 
