@@ -9,10 +9,14 @@ const Main = () => {
       <div className="flex flex-col items-start justify-start h-full w-full text-xl ">
         {/* intro */}
         <div className="lg:pt-12 pt-16">
-          hi there, i am <span className="font-bold">shivam.</span>
-          <br /> i am a{" "}
-          <span className="font-bold">full stack web developer</span> who enjoys
-          buidling things.
+          hi there, i'm <span className="font-bold">shivam.</span>
+          <div className="">
+            i'm a <span className="font-bold">full stack web developer</span>{" "}
+            who enjoys buidling things.
+          </div>
+          <div className="pt-5">
+            rn i am <span className="font-bold ">open to opportunites.</span>
+          </div>
         </div>
 
         {/* projects */}
