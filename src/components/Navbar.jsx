@@ -3,13 +3,15 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav className="h-16 w-full text-gray-900 flex items-center justify-between">
-      <div className="font-bold text-xl">shivam</div>
+      <div className="font-bold text-2xl font-[ZTFormom]">
+        <img className="" src="old-og-mac.svg" height={36} width={36} />
+      </div>
 
       {/* profile icons */}
 
-      <div className="font-normal flex gap-x-6 ">
+      <div className="font-normal font-lg flex gap-x-6 ">
         <a
-          className="hover:underline"
+          className="hover:underline "
           href="https://github.com/shivamhwp"
           target="_blank"
         >
@@ -20,7 +22,7 @@ const Navbar = () => {
           href="https://twitter.com/shivamhwp"
           target="_blank"
         >
-          twitter
+          twitter/x
         </a>
         <a
           className="hover:underline"

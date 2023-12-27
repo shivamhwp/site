@@ -8,18 +8,19 @@ const Main = () => {
       <Navbar />
       <div className="flex flex-col items-start justify-start h-full w-full text-xl ">
         {/* intro */}
-        <div className="lg:pt-12 pt-16 ">
-          hi there, i am shivam a full-stack web-dev.
-          <br /> rn i am working on colle club where only college students can
-          join and share their thoughts on different topics,courses they have
-          bought or colleges "anonymously".
+        <div className="lg:pt-12 pt-16">
+          hi there, i am <span className="font-bold">shivam.</span>
+          <br /> i am a{" "}
+          <span className="font-bold">full stack web developer</span> who enjoys
+          buidling things.
         </div>
+
         {/* projects */}
 
         <div className="pt-16 flex flex-col w-full ">
           <div className="text-zinc-900 font-bold text-2xl"> projects</div>
 
-          <div className="flex flex-col   pt-4 pb-12 ">
+          <div className="flex flex-col pt-4 w-auto ">
             {projects.map((projects) => {
               return (
                 <div key={projects?.id}>
@@ -32,6 +33,13 @@ const Main = () => {
               );
             })}
           </div>
+        </div>
+      </div>
+
+      {/* the guy */}
+      <div className="flex w-full h-full items-end justify-end">
+        <div className="flex h-96 w-96">
+          <img src="walking.svg" alt="pondering" draggable="false" />
         </div>
       </div>
     </div>
