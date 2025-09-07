@@ -7,6 +7,7 @@ export type PostFrontmatter = {
   tags?: string[];
   published?: string;
   updated?: string;
+  director?: string;
 };
 
 export type Post = {
@@ -108,7 +109,15 @@ export async function getAllPosts(): Promise<Post[]> {
     const updated = parsed.frontmatter.updated;
     const contentHtml = parsed.body;
     const director = parsed.frontmatter.director;
-    posts.push({ slug, title, tags, published, updated, contentHtml });
+    posts.push({
+      slug,
+      title,
+      tags,
+      published,
+      updated,
+      contentHtml,
+      director,
+    });
   }
 
   posts.sort((a, b) => {

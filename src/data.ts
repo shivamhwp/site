@@ -4,7 +4,7 @@ export type social = {
   id: number;
   title: string;
   link: string;
-  icon_name?: string;
+  icon?: React.ComponentType;
 };
 export type movie = {
   title: string;
@@ -176,27 +176,27 @@ export const socials: social[] = [
     id: 1,
     title: "x",
     link: "https://x.com/shivamhwp",
-    icon_name: Twitter,
+    icon: Twitter,
   },
   {
     id: 2,
     title: "gh",
     link: "https://github.com/shivamhwp",
-    icon_name: Github,
+    icon: Github,
   },
 
   // {
   //   id: 3,
   //   title: "linkedin",
   //   link: "https://www.linkedin.com/in/shivamhwp/",
-  //   icon_name: "Linkedin",
+  //   icon: "Linkedin",
   // },
 
   {
     id: 3,
     title: "yt",
     link: "https://www.youtube.com/@shivamhwp_",
-    icon_name: Youtube,
+    icon: Youtube,
   },
 ];
 
