@@ -1,0 +1,8 @@
+---
+title: "i'm subject to change"
+url: "change"
+tags: ["change"]
+published: 2025-04-19
+---
+
+i'm subject to change, eternally

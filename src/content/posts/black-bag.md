@@ -1,0 +1,26 @@
+---
+title: "black-bag"
+url: "black-bag"
+tags: ["movie"]
+published: 2025-05-04
+director : "steven soderbergh"
+---
+
+**major spoilers ahead**
+
+just watched the "black bag" by soderbergh. it's a good film.
+
+so here the main spy (michael fassbender) tries to find the mole in the team. i'm not going to explain the film. i'll tell the things i found interesting.
+
+- so, one and only thing the spy (george) (fassbender) and his wife (katheryn) (Cate Blanchett) care about are each other and they both can do anything for this, even if this means killing someone.
+
+- other thing i noticed is the amount of lights in the movie and you'll ask why, coz steven prefers not to use any camera lamps etc. and uses the practical or the lights in the scene which allows him to move camera freely. i didn't know that.
+
+- so there are mainly two colors of light in the room. one are the straight white lights which you generally see at his (george's) office and some places in his house. i think this represents some kind of coldness in the scene. no emotions or anything.  
+  the only place where the lights were a different color (yellow in this case) were the bedroom and the main table. also they're round in shape. i think this shows where the characters, mainly george and katheryn, show emotions.
+
+- it's the same table from where everything starts, and everything ends. when katheryn shoots the culprit. the gun was between her eyes and directed at the culprit. this shot was so good.
+
+- actually if you see now, we know that within i think like 10-20 minutes we got a hint on who was the culprit. as i think, zoe or dr vaughan (Naomie Harris) asks: "how many civilians died as a result?" james (Rege-Jean Page) answers with "greater good."
+
+well, this is what i found interesting in the movie rn. maybe i'll update in the future, who knows!

@@ -1,0 +1,22 @@
+---
+title: "inventory."
+url: "tools"
+tags: ["tools", "first", "code"]
+published: 2024-11-14
+updated: 2024-12-27
+---
+
+so the thing is i'm very fond of trying different stuff, take anything if it's cinema, music, food etc. so it also comes to tools i work with daily. so here are some of the tools i'm using currently.
+
+**_non-dev tools_**
+
+- **machine**: macbook air m1 2020 : solid.
+- **browser**: [brave](https://brave.com/) and [zen](https://zen-browser.app/).
+- **note-taking**: [notion](https://www.notion.so/) & [notesnook](https://notesnook.com).
+- **tracker block**: [nextdns](https://nextdns.io/)
+
+**_dev tools_**
+
+- **editor**: [cursor](https://cursor.com), [zed](https://zed.dev) & [nvim](https://neovim.io/) (sometimes).
+- **terminal**: [ghostty](https://ghostty.org/).
+- **shell**: [starship](https://starship.rs).
