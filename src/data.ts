@@ -174,13 +174,13 @@ export const movies: movie[] = [
 export const socials: social[] = [
   {
     id: 1,
-    title: "x",
+    title: "x.com",
     link: "https://x.com/shivamhwp",
     icon: Twitter,
   },
   {
     id: 2,
-    title: "gh",
+    title: "github",
     link: "https://github.com/shivamhwp",
     icon: Github,
   },
@@ -194,7 +194,7 @@ export const socials: social[] = [
 
   {
     id: 3,
-    title: "yt",
+    title: "youtube",
     link: "https://www.youtube.com/@shivamhwp_",
     icon: Youtube,
   },

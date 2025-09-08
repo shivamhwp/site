@@ -13,7 +13,7 @@ export function TopNav() {
   const isActive = (path: string) => pathname.startsWith(path);
 
   return (
-    <nav className="flex items-center justify-between w-full h-full py-4">
+    <nav className="flex items-center justify-between w-full h-full py-4 sm:py-2">
       <Link href="/" className="flex items-center">
         {logoUrl && (
           <Image
