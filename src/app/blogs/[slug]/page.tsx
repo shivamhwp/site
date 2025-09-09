@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import type { Metadata } from "next";
+import { getPostBySlug } from "@/lib/posts";
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
@@ -16,6 +18,19 @@ export const dynamic = "error";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  return {
+    title: post?.title ?? slug,
+    description: "an ipv4 address on the internet",
+  };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
