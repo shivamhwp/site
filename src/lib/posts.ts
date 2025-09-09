@@ -3,7 +3,6 @@ import path from "node:path";
 
 export type PostFrontmatter = {
   title?: string;
-  url?: string;
   tags?: string[];
   published?: string;
   updated?: string;
@@ -16,12 +15,25 @@ export type Post = {
   tags: string[];
   published?: string;
   updated?: string;
-  contentHtml: string;
   director?: string;
 };
 
 function getPostsDirectory(): string {
   return path.join(process.cwd(), "src", "content", "posts");
+}
+
+// MDX migration: frontmatter is now parsed by MDX compiler at render time.
+
+// Reading of raw files is only used for slug discovery in MDX mode.
+
+function deriveSlugFromFilename(filename: string): string {
+  return filename.replace(/\.mdx$/i, "");
+}
+
+export async function getAllSlugs(): Promise<string[]> {
+  const dir = getPostsDirectory();
+  const entries = await fs.readdir(dir);
+  return entries.filter((f) => f.endsWith(".mdx")).map(deriveSlugFromFilename);
 }
 
 function parseFrontmatter(raw: string): PostFrontmatter {
@@ -39,11 +51,10 @@ function parseFrontmatter(raw: string): PostFrontmatter {
 
     if (value.startsWith("[") && value.endsWith("]")) {
       try {
-        // Attempt to parse array-like values
-        frontmatter[key as keyof PostFrontmatter] = JSON.parse(value);
+        (frontmatter as Record<string, unknown>)[key] = JSON.parse(value);
         continue;
       } catch {
-        // Fall through to treat as string
+        // ignore JSON parse errors and fall through
       }
     }
 
@@ -60,33 +71,15 @@ function parseFrontmatter(raw: string): PostFrontmatter {
   return frontmatter;
 }
 
-async function readPostFile(
+async function readFrontmatterFromMdx(
   filePath: string,
-): Promise<{ frontmatter: PostFrontmatter; body: string } | null> {
+): Promise<PostFrontmatter> {
   const raw = await fs.readFile(filePath, "utf8");
-  if (!raw.startsWith("---")) {
-    return { frontmatter: {}, body: raw };
-  }
-
+  if (!raw.startsWith("---")) return {};
   const endIndex = raw.indexOf("\n---", 3);
-  if (endIndex === -1) {
-    return { frontmatter: {}, body: raw };
-  }
-
+  if (endIndex === -1) return {};
   const fmBlock = raw.slice(3, endIndex).trim();
-  const body = raw.slice(endIndex + 4).trim();
-  const frontmatter = parseFrontmatter(fmBlock);
-  return { frontmatter, body };
-}
-
-function deriveSlugFromFilename(filename: string): string {
-  return filename.replace(/\.md$/i, "");
-}
-
-export async function getAllSlugs(): Promise<string[]> {
-  const dir = getPostsDirectory();
-  const entries = await fs.readdir(dir);
-  return entries.filter((f) => f.endsWith(".md")).map(deriveSlugFromFilename);
+  return parseFrontmatter(fmBlock);
 }
 
 export async function getAllPosts(): Promise<Post[]> {
@@ -95,29 +88,16 @@ export async function getAllPosts(): Promise<Post[]> {
   const posts: Post[] = [];
 
   for (const entry of entries) {
-    if (!entry.endsWith(".md")) continue;
-    const filePath = path.join(dir, entry);
-    const parsed = await readPostFile(filePath);
-    if (!parsed) continue;
-
+    if (!entry.endsWith(".mdx")) continue;
     const slug = deriveSlugFromFilename(entry);
-    const title = parsed.frontmatter.title ?? slug;
-    const tags = Array.isArray(parsed.frontmatter.tags)
-      ? parsed.frontmatter.tags
-      : [];
-    const published = parsed.frontmatter.published;
-    const updated = parsed.frontmatter.updated;
-    const contentHtml = parsed.body;
-    const director = parsed.frontmatter.director;
-    posts.push({
-      slug,
-      title,
-      tags,
-      published,
-      updated,
-      contentHtml,
-      director,
-    });
+    const filePath = path.join(dir, entry);
+    const fm = await readFrontmatterFromMdx(filePath);
+    const title: string = fm.title ?? slug;
+    const tags: string[] = Array.isArray(fm.tags) ? fm.tags : [];
+    const published: string | undefined = fm.published;
+    const updated: string | undefined = fm.updated;
+    const director: string | undefined = fm.director;
+    posts.push({ slug, title, tags, published, updated, director });
   }
 
   posts.sort((a, b) => {
@@ -130,20 +110,15 @@ export async function getAllPosts(): Promise<Post[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const dir = getPostsDirectory();
-  const filePath = path.join(dir, `${slug}.md`);
   try {
-    const parsed = await readPostFile(filePath);
-    if (!parsed) return null;
-    const title = parsed.frontmatter.title ?? slug;
-    const tags = Array.isArray(parsed.frontmatter.tags)
-      ? parsed.frontmatter.tags
-      : [];
-    const published = parsed.frontmatter.published;
-    const updated = parsed.frontmatter.updated;
-    const contentHtml = parsed.body;
-    const director = parsed.frontmatter.director;
-    return { slug, title, tags, published, updated, contentHtml, director };
+    const filePath = path.join(getPostsDirectory(), `${slug}.mdx`);
+    const fm = await readFrontmatterFromMdx(filePath);
+    const title: string = fm.title ?? slug;
+    const tags: string[] = Array.isArray(fm.tags) ? fm.tags : [];
+    const published: string | undefined = fm.published;
+    const updated: string | undefined = fm.updated;
+    const director: string | undefined = fm.director;
+    return { slug, title, tags, published, updated, director };
   } catch {
     return null;
   }

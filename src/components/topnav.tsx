@@ -18,6 +18,7 @@ export function TopNav() {
         {logoUrl && (
           <Image
             src={logoUrl}
+            priority
             title="tatakae"
             width={32}
             height={32}
