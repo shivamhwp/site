@@ -30,8 +30,8 @@ export default function RootLayout({
             enableSystem
             enableColorScheme
           >
-            <div className="mx-auto w-full max-w-2xl px-4 sm:px-6">
-              <header className="flex items-center justify-between py-8">
+            <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 ">
+              <header className="flex items-center justify-between py-8 max-sm:py-4">
                 <TopNav />
               </header>
               {children}

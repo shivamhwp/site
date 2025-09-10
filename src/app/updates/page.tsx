@@ -10,12 +10,16 @@ async function getUpdatesMarkdown() {
   return content;
 }
 
-export default async function LogsPage() {
+export default async function UpdatesPage() {
   const markdown = await getUpdatesMarkdown();
   const { content } = await compileMDX({
     source: markdown,
     options: { mdxOptions: { remarkPlugins: [remarkGfm] } },
     components: { Image },
   });
-  return <div className="prose prose-invert max-w-none">{content}</div>;
+  return (
+    <div className="prose prose-invert max-w-2xl mx-auto px-4 py-2">
+      {content}
+    </div>
+  );
 }

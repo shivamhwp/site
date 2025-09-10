@@ -39,7 +39,7 @@ export default async function Home() {
         </div>
       </div>
       <div className="flex w-full items-center gap-4">
-        links:
+        on the internet:
         <div className="flex items-center gap-2">
           {socials.map((social) => (
             <Link

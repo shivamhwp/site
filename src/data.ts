@@ -150,15 +150,15 @@ export const movies: movie[] = [
   },
   {
     title: "Whiplash",
-    description: "obsession explained.",
+    description: "obsession explained. on the point cast.",
   },
   {
     title: "Mr Robot",
-    description: "you should watch this",
+    description: "you should watch this. rami went godmode.",
   },
   {
     title: "Manchester by the Sea",
-    description: "",
+    description: "casey affleck shows you his acting range.",
   },
   {
     title: "The Prestige",
@@ -167,7 +167,7 @@ export const movies: movie[] = [
   {
     title: "nymphomaniac vol 1&2",
     description:
-      "one of the most interesting movies i've seen lately. Charlotte Lucy Gainsbourg acting was insane.",
+      "one of the most interesting movies i've seen lately. Charlotte Lucy Gainsbourg & Stacy Martin acting was insane.",
   },
 ];
 

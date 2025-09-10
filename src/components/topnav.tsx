@@ -27,7 +27,7 @@ export function TopNav() {
           />
         )}
       </Link>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1">
         <Link
           href="/cinema"
           className={`hover:bg-accent rounded-md px-2 py-1 ${
@@ -37,20 +37,20 @@ export function TopNav() {
           cinema
         </Link>
         <Link
-          href="/blogs"
+          href="/writings"
           className={`hover:bg-accent rounded-md px-2 py-1 ${
-            isActive("/blogs") ? "bg-accent" : ""
+            isActive("/writings") ? "bg-accent" : ""
           }`}
         >
-          blogs
+          writings
         </Link>
         <Link
-          href="/logs"
+          href="/updates"
           className={`hover:bg-accent rounded-md px-2 py-1 ${
-            isActive("/logs") ? "bg-accent" : ""
+            isActive("/updates") ? "bg-accent" : ""
           }`}
         >
-          logs
+          updates
         </Link>
         <ModeToggle />
       </div>

@@ -72,8 +72,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const director = frontmatter.director as string | undefined;
 
   return (
-    <div className="min-h-full px-6 sm:px-8">
-      <div className="mx-auto w-full max-w-4xl">
+    <div className="h-full w-full flex px-2">
+      <div className="mx-auto w-full max-w-2xl">
         <article className="prose prose-invert mx-auto">
           <header className="mb-8 not-prose">
             <h1 className="text-2xl font-semibold tracking-tight mb-2">

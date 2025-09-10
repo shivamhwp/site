@@ -7,7 +7,7 @@ export default async function PostsListPage() {
   const posts = await getAllPosts();
   return (
     <div className="space-y-4 pb-16">
-      <h1 className="text-2xl font-semibold tracking-tight">blogs</h1>
+      <h1 className="text-2xl font-semibold tracking-tight">writings</h1>
       <div className="space-y-2">
         {posts.map((post) => (
           <article key={post.slug} className="border rounded-lg px-4 py-3">

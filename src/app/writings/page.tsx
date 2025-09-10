@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
-export default async function BlogsListPage() {
+export default async function writingsListPage() {
   const posts = await getAllPosts();
 
   return (
@@ -9,7 +9,8 @@ export default async function BlogsListPage() {
       <div className="space-y-2">
         {posts.map((post) => (
           <Link
-            href={`/blogs/${post.slug}`}
+            href={`/writings/${post.slug}`}
+            prefetch
             key={post.slug}
             className="group transition-colors hover:bg-accent hover:border-primary cursor-pointer rounded-lg border px-4 py-2 min-h-0 h-12 flex items-center"
           >
